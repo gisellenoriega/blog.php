@@ -21,5 +21,8 @@ if ($query) {
 	echo "Successfully created database: " . $database;
 }
 }
+else {
+	echo "Database already exists";
 	$connection->close();
+}
 ?>
