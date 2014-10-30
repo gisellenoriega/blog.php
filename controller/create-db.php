@@ -26,9 +26,12 @@ else {
 //*enables us to run this file and only create the database ONCE.
 }
 
+//*id int - the maximum display width for integers and it's the default value if unless the integer is UNSIGNED
+//*varchar - The TEXT data types, including TINYTEXT, are non-standard.
+//*a key in a relational database that is unique for each record.
 $query = $connection->query("CREATE TABLE posts ("
 	. "id int(11) NOT NULL AUTO_INCREMENT,"
-	. "title varchat(255) NOT NULL,"
+	. "title varchar(255) NOT NULL,"
 	. "post text NOT NULL,"
 	. "PRIMARY KEY (id))");
 
