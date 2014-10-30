@@ -23,6 +23,18 @@ if ($query) {
 }
 else {
 	echo "Database already exists";
-	$connection->close();
+//*enables us to run this file and only create the database ONCE.
 }
+
+$query = $connection->query("CREATE TABLE posts ("
+	. "id int(11) NOT NULL AUTO_INCREMENT,"
+	. "title varchat(255) NOT NULL,"
+	. "post text NOT NULL,"
+	. "PRIMARY KEY (id))");
+
+if($query) {
+	echo "successfully created table posts";
+}
+
+$connection->close();
 ?>
