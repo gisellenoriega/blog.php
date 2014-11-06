@@ -15,6 +15,8 @@
 	<!-- spans up more than one line -->
 		<label for="post">Post: </label>
 		<textarea name="post"></textarea>
+		<!-- submit button submits it somewhere else -->
+		<button type="submit">Submit</button>
 	</div>
 </form>
 ?>
