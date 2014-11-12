@@ -5,4 +5,4 @@
 	$post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 // echoes out the title and post
 	echo "<p>Title: $title</p>";
-	echo "<p>Post: $post</p>"
+	echo "<p>Post: $post</p>";
