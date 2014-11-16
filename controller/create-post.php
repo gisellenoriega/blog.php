@@ -3,14 +3,14 @@
 //* filter validates sanitizes to make sure there are no mailicious things.
 // DIR means directory and "/../" means finding a folder
 // $host $username $password $database are parameters
-	require_once(__DIR__ . "/../model/database.php");
+	require_once(__DIR__ . "/../model/config.php");
 
 	$connection = new mysqli($host, $username, $password, $database);
 
 	$title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
 	$post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 
-// 
+// INSERT INTO is used to add new records to a MYSQL table
 	$query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
 
 	if($query) {

@@ -4,7 +4,7 @@
 
 //*The directory of the file. If used inside an include, the directory of the included file is returned. This is equivalent to dirname(__FILE__). 
 //*This directory name does not have a trailing slash unless it is the root directory.
-	require_once(__DIR__ . "/../model/database.php");
+	require_once(__DIR__ . "/../model/config.php");
 
 	$connection = new mysqli($host, $username, $password);
 
