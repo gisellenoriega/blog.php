@@ -13,7 +13,15 @@ class Database {
 		$this->database = $database;
 
 	}
+	public function openConnection() {
 
+	}
+
+	public function closeConnection() {
+
+	}
+
+	public function query($string)
 // use a class instead of many functions because the code would look neater and to make new objects.
 // function __construct automatically calls on class instantation
 }
