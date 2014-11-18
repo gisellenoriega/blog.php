@@ -14,7 +14,11 @@ class Database {
 
 	}
 	public function openConnection() {
+		$this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
+		if($this->connection->connect_error){
+			die("<p>Error: " . $connection->connect_error . "</p>");
+	}
 	}
 
 	public function closeConnection() {
@@ -23,5 +27,6 @@ class Database {
 
 	public function query($string)
 // use a class instead of many functions because the code would look neater and to make new objects.
-// function __construct automatically calls on class instantation
+// __construct() - the method name for the constructor. The constructor is called on an object after its been created, its a good place to put initialisation code!!
+// A function is a name we give to a block of code that can be executed whenever we need it.
 }
