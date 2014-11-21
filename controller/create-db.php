@@ -6,24 +6,6 @@
 //*This directory name does not have a trailing slash unless it is the root directory.
 require_once(__DIR__ . "/../model/config.php");
 
-	$connection = new mysqli($host, $username, $password);
-	if($connection->connect_error){
-		die("<p>Error: " . $connection->connect_error . "</p>");
-	}
-
-		$exists = $connection->select_db($database);
-
-	if(!$exists) {
-	$query = $connection->query("CREATE DATABASE $database");
-
-	if ($query) {
-	echo "<p>Successfully created database: " . $database . "</p>";
-	}
-	}
-	else {
-		echo "<p>Database already exists</p>";
-//*enables us to run this file and only create the database ONCE.
-	}
 
 //*id int - the maximum display width for integers and it's the default value if unless the integer is UNSIGNED
 //*varchar - The TEXT data types, including TINYTEXT, are non-standard.
@@ -43,5 +25,4 @@ $query = $connection->query("CREATE TABLE posts ("
 
 	}
 
-	$connection->close();
 ?>
